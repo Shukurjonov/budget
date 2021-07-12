@@ -8,7 +8,7 @@ CREATE TABLE expense (
 );
 
 INSERT INTO expense (expense_name, expense_cost) VAlUES ('Kurs', 100);
-INSERT INTO expense (expense_name, expense_cost) VAlUES ('Kvartiea', 250);
+INSERT INTO expense (expense_name, expense_cost) VAlUES ('Kvartira', 250);
 INSERT INTO expense (expense_name, expense_cost) VAlUES ('Kiyim', 140);
 INSERT INTO expense (expense_name, expense_cost) VAlUES ('Yo''l kira uchun', 100);
 

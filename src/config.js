@@ -4,11 +4,7 @@ const host = ip({internal: false});
 const PORT = process.env.PORT || 5400;
 
 const pgConfig = {
-  user: 'postgres',
-  host: 'localhost', 
-  post: 5432,
-  password: '1048576',
-  database: 'budget'
+ connectionString: 'postgres://ixunvmdc:1loKHlEURjgmKW_9olARx_4wyG1NQsKj@batyr.db.elephantsql.com/ixunvmdc'
 }
 
 module.exports = {

@@ -16,7 +16,7 @@
         Available Budget in <span class="budget__title--month"><%= new Date().toLocaleString('default', { month: 'long' });%></span>:
       </div>
       
-      <div class="budget__value"><%= totalExpense.sum - totalIncome.sum %></div>
+      <div class="budget__value"><%= totalIncome.sum - totalExpense.sum  %></div>
       
       <div class="budget__income">
         <div class="budget__income--text">Income</div>
@@ -84,7 +84,7 @@
                 <div class="right"><div class="item__value">- <%= exp.expense_cost %></div>
                 <div class="item__percentage"><%= Math.round(exp.expense_cost/totalIncome.sum * 100) %>%</div>
                 <div class="item__delete">
-                  <a href="/exponse/delete/<%= exp.expense_id %>" class="item__delete--btn"><i class="far fa-times-circle"></i></a>
+                  <a href="/expense/delete/<%= exp.expense_id %>" class="item__delete--btn"><i class="far fa-times-circle"></i></a>
                 </div>
               </li>
             <% } %>

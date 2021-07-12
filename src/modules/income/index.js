@@ -1,8 +1,7 @@
 const router = require('express').Router();
-const { GET, POST } = require('./controller.js') 
+const { DELETE } = require('./controller.js') 
 
-router.route('/')
-      .get(GET)
-      .post(POST)
+router.route('/income/delete/:incomeId')
+      .get( DELETE )
 
 module.exports = router;

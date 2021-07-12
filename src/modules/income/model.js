@@ -1,20 +1,8 @@
 const { fetch, fetchAll } = require('../../lib/postgres.js');
-const { EXPENSES, INCOME, TOTALINCOME, TOTALEXPENSE, INSERTEXPENSE, INSERTINCOME } = require('./query.js');
+const { DELETE_INCOME } = require('./query.js');
 
-const expense = () => fetchAll( EXPENSES );
-const income = () => fetchAll( INCOME );
-const totalIncome = () => fetch( TOTALINCOME );
-const totalExpense = () => fetch( TOTALEXPENSE );
-const insertExpense = ( { purpose, cost } ) => fetch( INSERTEXPENSE, purpose, +cost );
-const insertIncome = ( { purpose, cost } ) => fetch( INSERTINCOME, purpose, +cost );
-
-
+const deleteIncome = ( { incomeId } ) => fetch( DELETE_INCOME, incomeId );
 
 module.exports = { 
-  expense, 
-  income, 
-  totalIncome, 
-  totalExpense,
-  insertExpense,
-  insertIncome
+  deleteIncome
 };
