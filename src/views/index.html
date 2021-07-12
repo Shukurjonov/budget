@@ -40,13 +40,13 @@
   <div class="bottom">
     <div class="add__container">
       
-      <form class="add"> 
-        <select class="add__type">
+      <form class="add" action="/" method="POST"> 
+        <select class="add__type" name="select">
           <option value="inc" selected>+</option>
           <option value="exp">-</option>
         </select>
-        <input type="text" class="add__description" placeholder="Add description">
-        <input type="number" class="add__value" placeholder="Value">
+        <input name="purpose" type="text" class="add__description" placeholder="Add description" required>
+        <input name="cost" type="number" class="add__value"  placeholder="Value" required>
         <button type="submit" class="add__btn"><i class="fas fa-check"></i></button>
         
       </form>
@@ -63,7 +63,8 @@
                 <div class="item__description"><%= inc.income_name %></div>
                 <div class="right">
                   <div class="item__value">+ <%= inc.income_cost %></div>
-                  <div class="item__delete"><button class="item__delete--btn"><i class="far fa-times-circle"></i></button>
+                  <div class="item__delete">
+                    <a href="/income/delete/<%= inc.income_id %>" class="item__delete--btn"><i class="far fa-times-circle"></i></a>
                   </div>
                 </div>  
               </li>
@@ -83,7 +84,7 @@
                 <div class="right"><div class="item__value">- <%= exp.expense_cost %></div>
                 <div class="item__percentage"><%= Math.round(exp.expense_cost/totalIncome.sum * 100) %>%</div>
                 <div class="item__delete">
-                  <a href="/exponse/detele/id" class="item__delete--btn"><i class="far fa-times-circle"></i></a>
+                  <a href="/exponse/delete/<%= exp.expense_id %>" class="item__delete--btn"><i class="far fa-times-circle"></i></a>
                 </div>
               </li>
             <% } %>

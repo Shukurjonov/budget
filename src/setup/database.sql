@@ -7,10 +7,10 @@ CREATE TABLE expense (
   expense_date timestamp default current_timestamp
 );
 
-INSERT INTO expense (expense_name, expense_cost) VAlUES ('Yo''l kira uchun', 100);
 INSERT INTO expense (expense_name, expense_cost) VAlUES ('Kurs', 100);
 INSERT INTO expense (expense_name, expense_cost) VAlUES ('Kvartiea', 250);
 INSERT INTO expense (expense_name, expense_cost) VAlUES ('Kiyim', 140);
+INSERT INTO expense (expense_name, expense_cost) VAlUES ('Yo''l kira uchun', 100);
 
 CREATE TABLE income (
   income_id serial primary key,
