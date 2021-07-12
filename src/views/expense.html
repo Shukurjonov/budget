@@ -1,0 +1,17 @@
+<div class="expenses">
+  <h2 class="expenses__title">Expenses</h2>
+  <ul class="expenses__list">
+    
+    <% for (let exp of expense) {%>
+      <li class="item">
+        <div class="item__description"><%= exp.expense_name %></div>
+        <div class="right"><div class="item__value">- <%= exp.expense_cost %></div>
+        <div class="item__percentage"><%= Math.round(exp.expense_cost/totalIncome.sum * 100) %>%</div>
+        <div class="item__delete">
+          <a href="/expense/delete/<%= exp.expense_id %>" class="item__delete--btn"><i class="far fa-times-circle"></i></a>
+        </div>
+      </li>
+    <% } %>
+    
+  </ul>
+</div>

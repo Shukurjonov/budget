@@ -1,0 +1,21 @@
+<div class="income">
+  <h2 class="income__title">Income</h2>
+  
+
+  <ul class="income__list">
+
+    <% for (let inc of income) {%>
+      <li class="item">
+        <div class="item__description"><%= inc.income_name %></div>
+        <div class="right">
+          <div class="item__value">+ <%= inc.income_cost %></div>
+          <div class="item__delete">
+            <a href="/income/delete/<%= inc.income_id %>" class="item__delete--btn"><i class="far fa-times-circle"></i></a>
+          </div>
+        </div>  
+      </li>
+    <% } %>
+
+   
+  </ul>
+</div>
